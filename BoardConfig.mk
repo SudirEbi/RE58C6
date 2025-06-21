@@ -158,7 +158,7 @@ TW_USE_NEW_MINADB := true
 TW_DEVICE_VERSION := Realme_Narzo_N53-SudirEbi
 
 # additional lib for fix decryption
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \\
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/hw/android.hardware.gatekeeper@1.0.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/hw/android.hardware.security.keymint-V1-ndk.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/hw/android.hardware.security.secureclock-V1-ndk.so \
