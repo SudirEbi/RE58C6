@@ -1,5 +1,8 @@
 #add for board init.rc for recovery mode
 import /init.recovery.common.rc
+import /init.recovery.logd.rc
+import /init.recovery.usb.rc
+
 
 on fs
     start load_modules

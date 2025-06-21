@@ -18,7 +18,17 @@ service vendor.mlogservice /vendor/bin/mlogservice
     user shell
     group system root
 
+service adbd /system/bin/adbd
+    class core
+    seclabel u:r:adbd:s0
+    user root
+    group root shell system input
+    disabled
+    oneshot
 
+on property:sys.usb.config=adb
+    start adbd
+    
 on init
     # Apply strict SELinux checking of PROT_EXEC on mmap/mprotect calls.
     write /sys/fs/selinux/checkreqprot 0
